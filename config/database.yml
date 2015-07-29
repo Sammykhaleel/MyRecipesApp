@@ -20,6 +20,13 @@ test:
   <<: *default
   database: db/test.sqlite3
 
+# production:
+#   <<: *default
+#   database: db/production.sqlite3
 production:
   <<: *default
-  database: db/production.sqlite3
+  host: localhost
+  adapter: postgresql
+  database: myrecipe
+  username: postgres
+  password: password # TODO: make this an environment variable
