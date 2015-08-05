@@ -1,11 +1,10 @@
 
 <div class="row">
   <div class = "well col-md-8 col-md-offset-2">
+    <h3>Write a review</h3>
     <%= form_for ([@recipe, @recipe.reviews.build]) do |f|%>
-      <%= f.label :body%>
       <%= f.text_field :body%>
-
-      <%= f.submit 'Create Style', class: "btn btn-success" %>
+      <%= f.submit 'Submit a review', class: "btn btn-success" %>
     <%end%>
   </div>
 </div>
