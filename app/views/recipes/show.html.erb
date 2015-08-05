@@ -41,4 +41,10 @@
   </div>
 </div>
 
+<% @recipe.reviews.each do |review|%>
+  <%= review.body %>
+<%end%>
+
+<%= render 'reviews/form' %>
+
 <h5><%= link_to 'Return to the Recipes listing', recipes_path, class: "btn btn-warning btn-small"%></h5>
